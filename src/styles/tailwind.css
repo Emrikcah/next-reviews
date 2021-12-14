@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.underlineMe{
+position: relative;
+text-decoration: none;
+}
+
+.underlineMe::after{
+   position: absolute;
+   content: '';
+   height: 4px;
+   bottom: -8px;
+   width: 75px;
+   background-color: #0284c7;
+   left: 0;
+   right: 0;
+   margin: 0 auto;
+}
