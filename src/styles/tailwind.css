@@ -2,14 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-.underlineMe{
-position: relative;
-text-decoration: none;
+.underlineMe {
+   position: relative;
+   text-decoration: none;
 }
 
-.underlineMe::after{
+.underlineMe::after {
    position: absolute;
-   content: '';
+   content: "";
    height: 4px;
    bottom: -8px;
    width: 75px;

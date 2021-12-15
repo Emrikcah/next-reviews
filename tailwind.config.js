@@ -10,9 +10,15 @@ module.exports = {
       current: 'currentColor',
       sky: colors.sky,
       cyan: colors.cyan,
-      red: colors.red,
+      white: colors.white,
     },
-    extend: {},
+    extend: {
+      spacing:{
+        'min-width':'375px',
+        'fixed-width': '675px',
+        
+      }
+    },
   },
   plugins: [],
 }
