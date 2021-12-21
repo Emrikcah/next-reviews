@@ -3,21 +3,28 @@ import Image from "next/image";
 import { FaQuoteRight, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const Card = (props) => {
+   console.log(props);
    const [currentPerson, setCurrentPerson] = useState(0);
 
    const {name, job, image, text } = props[currentPerson];
-   const nameMeLater = Object.keys(props).length;
+   const nameMeLater = Object.keys(props).length - 2;
+   
 
    const nextPerson = () => {
       console.log(currentPerson,nameMeLater);
       setCurrentPerson(currentPerson + 1)
-      if (currentPerson === nameMeLater) {
+      if (currentPerson > nameMeLater) {
+         console.log(currentPerson,nameMeLater);
          setCurrentPerson(0)
       }
    }
 
    const previousPerson = () => {
-      
+      console.log('currentPerson',currentPerson,'name me later:',nameMeLater);
+      setCurrentPerson(currentPerson - 1)
+      if (currentPerson < 1) {
+         setCurrentPerson(3)
+      }
    }
 
    return (
