@@ -5,13 +5,26 @@ import { FaQuoteRight, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 const Card = (props) => {
    const [currentPerson, setCurrentPerson] = useState(0);
 
-   const { id, name, job, image, text } = props[currentPerson];
+   const {name, job, image, text } = props[currentPerson];
+   const nameMeLater = Object.keys(props).length;
+
+   const nextPerson = () => {
+      console.log(currentPerson,nameMeLater);
+      setCurrentPerson(currentPerson + 1)
+      if (currentPerson === nameMeLater) {
+         setCurrentPerson(0)
+      }
+   }
+
+   const previousPerson = () => {
+      
+   }
 
    return (
       <div className="w-min-width lg:w-fixed-width bg-white rounded p-10 text-center">
-         <div style={{ fontSize: "0" }} className="">
+         <div style={{ fontSize: "0" }} className="relative">
             <Image src={image} width={200} height={200} className="rounded-full block" />
-            <span>
+            <span className="absolute">
                <FaChevronRight />
             </span>
          </div>
@@ -20,10 +33,10 @@ const Card = (props) => {
             <p>{job}</p>
             <p> {text}</p>
          <div>
-            <button>
+            <button onClick={previousPerson}>
                <FaChevronLeft/>
             </button>
-            <button>
+            <button onClick={nextPerson}>
                <FaChevronRight/>
             </button>
          </div>
