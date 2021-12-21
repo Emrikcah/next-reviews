@@ -7,7 +7,7 @@ const Card = (props) => {
    const [currentPerson, setCurrentPerson] = useState(0);
 
    const {name, job, image, text } = props[currentPerson];
-   const nameMeLater = Object.keys(props).length - 2;
+   const nameMeLater = Object.keys(props).length - 2; // i dont like this at all. better way?
    
 
    const nextPerson = () => {
