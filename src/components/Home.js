@@ -13,7 +13,7 @@ export function Home() {
 
          <main className="">
             <h1 className="text-center capitalize font-extrabold text-4xl  mb-6 underlineMe">our reviews</h1>
-            <Card {...data}/>
+            <Card data={data}/>
          </main>
       </div>
    );

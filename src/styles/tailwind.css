@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+.btn{
+   @apply text-sky-300 text-2xl bg-transparent border-transparent cursor-pointer my-0 mx-2
+}
+
+.btn:hover{
+   @apply text-sky-200
+}
+
+.randomBtn{
+   @apply mt-2 bg-sky-100 text-sky-500 tracking-tight font-black py-1 px-2 capitalize rounded border-transparent cursor-pointer
+}
+
+.randomBtn:hover{
+   @apply text-sky-300
+}
+
 .underlineMe {
    position: relative;
    text-decoration: none;
@@ -18,3 +34,5 @@
    right: 0;
    margin: 0 auto;
 }
+
+
