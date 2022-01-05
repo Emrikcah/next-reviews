@@ -18,6 +18,12 @@
    @apply text-sky-300
 }
 
+.img-container::before{
+  
+  
+   /* @apply before:w-full before:h-full before:bg-sky-700 before:rounded-full before:top-5 before:right-5 */
+}
+
 .underlineMe {
    position: relative;
    text-decoration: none;

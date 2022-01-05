@@ -52,9 +52,9 @@ const Card = ({ data }) => {
 
    return (
       <div className="w-min-width lg:w-fixed-width bg-white rounded p-5 text-center">
-         <div style={{ fontSize: "0" }} className="relative mb-4">
-            <Image src={image} width={150} height={150} className="rounded-full block" />
-            <span className="absolute w-5">
+         <div style={{ fontSize: "0" }} className="relative mb-4 ">
+            <Image src={image} width={150} height={150} className="rounded-full block " />
+            <span className="absolute w-10 h-10 top-5 left-20 text-lg bg-sky-700 text-white rounded-full grid place-items-center ">
                <FaQuoteRight />
             </span>
          </div>
